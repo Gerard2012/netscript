@@ -8,7 +8,7 @@ device = {
 }
 
 
-def main(target_device):
+def get_device_info(target_device):
 
     with IOSXEDriver(**target_device) as conn:
         result = conn.send_command("show version")
@@ -33,7 +33,7 @@ if __name__ == '__main__':
 
     try:
 
-        print(main(device))
+        print(get_device_info(device))
 
     except Exception as e:
 
