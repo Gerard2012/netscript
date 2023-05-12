@@ -128,8 +128,11 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-#snetscript related files and folders
+# Ignore netscript info files and folder
 devices.py
 /nxos
 /iosxe
 /ios
+
+# Ignore csv files
+.csv
