@@ -128,4 +128,8 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
+#snetscript related files and folders
 devices.py
+/nxos
+/iosxe
+/ios
