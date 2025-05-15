@@ -246,7 +246,7 @@ def run_ios_mthread(devices, cmds, folder):
 
 if __name__ == '__main__':
 
-    from devices import nxos_switches, iosxe_switches, ios_switches
+    from devices import nxos_switches, iosxe_switches
 
     print()
 
@@ -257,11 +257,12 @@ if __name__ == '__main__':
 
     try:
 
-        asyncio.get_event_loop().run_until_complete(run_async(nxos_switches, 'nxos/nxos_checks.txt', 'nxos/prechecks'))
+        asyncio.get_event_loop().run_until_complete(run_async(nxos_switches, 'nxos/LN-RDC-ESV-1V_checks.txt', 'nxos/prechecks'))
 
-        asyncio.get_event_loop().run_until_complete(run_async(iosxe_switches, 'iosxe/iosxe_checks.txt', 'iosxe/prechecks'))
+        asyncio.get_event_loop().run_until_complete(run_async(iosxe_switches, 'iosxe/DB-BUR-11-CER-CORE-1_shows.txt', 'iosxe/prechecks'))
 
-        asyncio.get_event_loop().run_until_complete(run_async(ios_switches, 'ios/ios_checks.txt', 'ios/prechecks'))
+        asyncio.get_event_loop().run_until_complete(run_async(iosxe_switches, 'iosxe/DB-BUR-11-CER-CORE-1_pings.txt', 'iosxe/prechecks'))
+
 
         finish = time.perf_counter()
         print(f'CHECKS COMPLETE: @ {time.strftime("%X")} IN {round(finish-start, 2)} SECONDS !!!\n')
@@ -283,11 +284,11 @@ if __name__ == '__main__':
 
     try:
 
-        asyncio.get_event_loop().run_until_complete(run_async(nxos_switches, 'nxos/nxos_checks.txt', 'nxos/postchecks'))
+        asyncio.get_event_loop().run_until_complete(run_async(nxos_switches, 'nxos/LN-RDC-ESV-1V_checks.txt', 'nxos/postchecks'))
 
-        asyncio.get_event_loop().run_until_complete(run_async(iosxe_switches, 'iosxe/iosxe_checks.txt', 'iosxe/postchecks'))
+        asyncio.get_event_loop().run_until_complete(run_async(iosxe_switches, 'iosxe/DB-BUR-11-CER-CORE-1_shows.txt', 'iosxe/postchecks'))
 
-        asyncio.get_event_loop().run_until_complete(run_async(ios_switches, 'ios/ios_checks.txt', 'ios/postchecks'))
+        asyncio.get_event_loop().run_until_complete(run_async(iosxe_switches, 'iosxe/DB-BUR-11-CER-CORE-1_pings.txt', 'iosxe/postchecks'))
 
         finish = time.perf_counter()
         print(f'CHECKS COMPLETE: @ {time.strftime("%X")} IN {round(finish-start, 2)} SECONDS !!!\n')

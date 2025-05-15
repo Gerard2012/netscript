@@ -8,43 +8,22 @@ password = getpass('password: ')
 
 nxos_switches = [
     {
-    'NXOS_SW1': {
-        'host': '10.57.252.12',
+    'LN-RDC-ESV-1V': {
+        'host': '172.24.252.80',
         'auth_username': username,
         'auth_password': password,
         'auth_strict_key': False,
         'transport': 'asyncssh',
         'driver': AsyncNXOSDriver
         }
-    },
-    {
-    'NXOS_SW2': {
-        'host': '10.190.252.12',
-        'auth_username': username,
-        'auth_password': password,
-        'auth_strict_key': False,
-        'transport': 'asyncssh',
-        'driver': AsyncNXOSDriver
-        }
-    }
     }
 ]
 
 
 iosxe_switches = [
     {
-    'IOSXE_SW1': {
-        'host': '10.40.15.1',
-        'auth_username': username,
-        'auth_password': password,
-        'auth_strict_key': False,
-        'transport': 'asyncssh',
-        'driver': AsyncIOSXEDriver
-        }
-    },
-    {
-    'IOSXE_SW2': {
-        'host': '10.191.15.1',
+    'DB-BUR-11-CER-CORE-1': {
+        'host': '10.49.15.1',
         'auth_username': username,
         'auth_password': password,
         'auth_strict_key': False,
